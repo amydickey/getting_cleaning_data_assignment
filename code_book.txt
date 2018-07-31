@@ -1,0 +1,107 @@
+====================
+Code Book for Tidy Dataset Homework Assignment
+====================
+
+Variables created in my R code:
+———————————————
+activity_labels :  data frame of the “acivity_labels.txt” file (see below)
+features : data frame of the “features.txt” file (see below)
+subject_test : data frame of the “subject_test.txt” file (see below)
+X_test: data frame of the “X_test.txt” file (see below)
+y_test: data frame of the “y_test.txt” file (see below)
+subject_train : data frame of the “subject_train.txt” file (see below)
+X_train: data frame of the “Y_train.txt” file (see below)
+y_train: data frame of the “y_train.txt” file (see below)
+
+test_activity_vector : y_test numbers changed to a vector of activity labels according to labels given in the “activity_labels” data frame
+
+train_activity_vector : y_train numbers changed to a vector of activity labels according to labels given in the “activity_labels” data frame
+
+col_vector: column index giving me the columns I need from “X_train” and “X_test” data sets (the mean and stdev values of measurements)
+
+train_data: the columns that I need from the “X_train” dataset using the col_vector index.
+
+test_data : the columns that I need from the “X_test” dataset using the col_vector index.
+
+train_data2 : added subject number and activity values to “train_data”
+
+test_data2 : added subject number and activity values to “test_data”
+
+name_vector : a vector of names for the “train_data2” and “test_data2” data sets. These are the same as the names below in the “Summaries created” section
+
+tidy_data : a tibble giving me the data summaries as described in the “Summaries created” section below
+
+———————————————-
+Summaries created in the tidy_data data set:
+————————————————
+subject_number : the subject number as provided in “subject_test.txt” and “subject_train.txt”
+
+activity : the activity label as provided in the “y_test.txt” and “y_train.txt” files and interpreted using “activity_labels.txt”
+
+Means of the following variables according to subject_number and activity:
+* gravity_accel_mean_x
+* gravity_accel_mean_y
+* gravity_accel_mean_z
+* gravity_accel_stdev_x
+* gravity_accel_stdev_y
+* gravity_accel_stdev_z
+* body_gyro_mean_x
+* body_gyro_mean_y
+* body_gyro_mean_z
+* body_gyro_stdev_x
+* body_gyro_stdev_y
+* body_gyro_stdev_z
+
+File created:
+——————————————
+tidy_data : This is a text file containing the nibble of the summarized data.
+
+=========================
+Variables in the original dataset (from the original “activity_labels” file):
+=========================
+
+y_test and y_train activity labels are as follows:
+1 WALKING
+2 WALKING_UPSTAIRS
+3 WALKING_DOWNSTAIRS
+4 SITTING
+5 STANDING
+6 LAYING
+
+
+For each record it is provided (from the original “README” file):
+======================================
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.
+- Triaxial Angular velocity from the gyroscope. 
+- A 561-feature vector with time and frequency domain variables. 
+- Its activity label. 
+- An identifier of the subject who carried out the experiment.
+
+=====================
+Files in the original dataset (from the original “README” file) :
+=====================
+- 'README.txt'
+
+- 'features_info.txt': Shows information about the variables used on the feature vector.
+
+- 'features.txt': List of all features.
+
+- 'activity_labels.txt': Links the class labels with their activity name.
+
+- 'train/X_train.txt': Training set.
+
+- 'train/y_train.txt': Training labels.
+
+- 'test/X_test.txt': Test set.
+
+- 'test/y_test.txt': Test labels.
+
+The following files are available for the train and test data. Their descriptions are equivalent. 
+
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. 
+
+- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. 
+
+- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. 
+
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. 
