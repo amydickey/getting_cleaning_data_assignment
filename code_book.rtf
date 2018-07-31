@@ -1,0 +1,107 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\margl1440\margr1440\vieww15200\viewh12400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 ====================\
+Code Book for Tidy Dataset Homework Assignment\
+====================\
+\
+Variables created in my R code:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+activity_labels :  data frame of the \'93acivity_labels.txt\'94 file (see below)\
+features : data frame of the \'93features.txt\'94 file (see below)\
+subject_test : data frame of the \'93subject_test.txt\'94 file (see below)\
+X_test: data frame of the \'93X_test.txt\'94 file (see below)\
+y_test: data frame of the \'93y_test.txt\'94 file (see below)\
+subject_train : data frame of the \'93subject_train.txt\'94 file (see below)\
+X_train: data frame of the \'93Y_train.txt\'94 file (see below)\
+y_train: data frame of the \'93y_train.txt\'94 file (see below)\
+\
+test_activity_vector : y_test numbers changed to a vector of activity labels according to labels given in the \'93activity_labels\'94 data frame\
+train_activity_vector : y_train numbers changed to a vector of activity labels according to labels given in the \'93activity_labels\'94 data frame\
+\
+col_vector: column index giving me the columns I need from \'93X_train\'94 and \'93X_test\'94 data sets (the mean and stdev values of measurements)\
+train_data: the columns that I need from the \'93X_train\'94 dataset using the col_vector index.\
+test_data : the columns that I need from the \'93X_test\'94 dataset using the col_vector index.\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 train_data2 : added subject number and activity values to \'93train_data\'94\
+test_data2 : added subject number and activity values to \'93test_data\'94\
+name_vector : a vector of names for the \'93train_data2\'94 and \'93test_data2\'94 data sets. These are the same as the names below in the \'93Summaries created\'94 section\
+tidy_data : a tibble giving me the data summaries as described in the \'93Summaries created\'94 section below\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97-\
+Summaries created in the tidy_data data set:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+subject_number : the subject number as provided in \'93subject_test.txt\'94 and \'93subject_train.txt\'94\
+activity : the activity label as provided in the \'93y_test.txt\'94 and \'93y_train.txt\'94 files and interpreted using \'93activity_labels.txt\'94\
+\
+Means of the following variables according to subject_number and activity:\
+* gravity_accel_mean_x\
+* gravity_accel_mean_y\
+* gravity_accel_mean_z\
+* gravity_accel_stdev_x\
+* gravity_accel_stdev_y\
+* gravity_accel_stdev_z\
+* body_gyro_mean_x\
+* body_gyro_mean_y\
+* body_gyro_mean_z\
+* body_gyro_stdev_x\
+* body_gyro_stdev_y\
+* body_gyro_stdev_z\
+\
+File created:\
+\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\'97\
+tidy_data : This is a text file containing the nibble of the summarized data.\
+\
+=========================\
+Variables in the original dataset (from the original \'93activity_labels\'94 file):\
+=========================\
+\
+y_test and y_train activity labels are as follows:\
+1 WALKING\
+2 WALKING_UPSTAIRS\
+3 WALKING_DOWNSTAIRS\
+4 SITTING\
+5 STANDING\
+6 LAYING\
+\
+\
+For each record it is provided (from the original \'93README\'94 file):\
+======================================\
+- Triaxial acceleration from the accelerometer (total acceleration) and the estimated body acceleration.\
+- Triaxial Angular velocity from the gyroscope. \
+- A 561-feature vector with time and frequency domain variables. \
+- Its activity label. \
+- An identifier of the subject who carried out the experiment.\
+\
+=====================\
+Files in the original dataset (from the original \'93README\'94 file) :\
+=====================\
+- 'README.txt'\
+\
+- 'features_info.txt': Shows information about the variables used on the feature vector.\
+\
+- 'features.txt': List of all features.\
+\
+- 'activity_labels.txt': Links the class labels with their activity name.\
+\
+- 'train/X_train.txt': Training set.\
+\
+- 'train/y_train.txt': Training labels.\
+\
+- 'test/X_test.txt': Test set.\
+\
+- 'test/y_test.txt': Test labels.\
+\
+The following files are available for the train and test data. Their descriptions are equivalent. \
+\
+- 'train/subject_train.txt': Each row identifies the subject who performed the activity for each window sample. Its range is from 1 to 30. \
+\
+- 'train/Inertial Signals/total_acc_x_train.txt': The acceleration signal from the smartphone accelerometer X axis in standard gravity units 'g'. Every row shows a 128 element vector. The same description applies for the 'total_acc_x_train.txt' and 'total_acc_z_train.txt' files for the Y and Z axis. \
+\
+- 'train/Inertial Signals/body_acc_x_train.txt': The body acceleration signal obtained by subtracting the gravity from the total acceleration. \
+\
+- 'train/Inertial Signals/body_gyro_x_train.txt': The angular velocity vector measured by the gyroscope for each window sample. The units are radians/second. }
